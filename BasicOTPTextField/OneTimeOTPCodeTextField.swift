@@ -61,9 +61,12 @@ class OneTimeOTPCodeTextField : UITextField {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textAlignment = .center
-            label.font = .systemFont(ofSize: 48)
+            label.font = .systemFont(ofSize: 32)
             label.isUserInteractionEnabled = true
             label.text = defaultCharacter
+            label.layer.borderColor = UIColor.darkGray.cgColor
+            label.layer.borderWidth = 1.0
+            label.layer.cornerRadius = 5
             stackView.addArrangedSubview(label)
             
             digitLabels.append(label)
